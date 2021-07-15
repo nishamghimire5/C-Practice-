@@ -1,0 +1,9 @@
+{
+    "cSpell.words": [
+        "UNED"
+    ],
+    "files.associations": {
+        "stdio.h": "c",
+        "typeinfo": "c"
+    }
+}
