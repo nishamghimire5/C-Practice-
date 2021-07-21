@@ -1,4 +1,4 @@
-#include <stdio.h> //////no knowledge---INCOMPLETE;;;;;;----IGNORE;;;
+#include <stdio.h>
 
 typedef struct {
     char name[30];
@@ -6,43 +6,48 @@ typedef struct {
     float marks;
 } memb;
 
-int sort(int n,memb *record);
+void sort(int n,memb *record);
 
 int main(){
-    int n, i, j;
+    int n;
     printf("Enter number of students\n");
     scanf("%d", &n);
         memb students[n];
-        memb *record;
+        memb *record = NULL;
+        
+        record = students;
 
         printf("Enter Rollno, Name & marks\n");
         for (int i = 0; i < n; i++)
         {
-        scanf("%d", &students[i].roll);
-        scanf("%s", &students[i].name);
-        scanf("%f", &students[i].marks);
+        scanf("%d", &(record + i)->roll);
+        scanf("%s", (record + i)->name);
+        scanf("%f", &(record + i)->marks);
         }   
-        sort(n,&students[n]);
+        sort(n, record);
         return 0;
 }
 
 
-int sort (int n,memb *record){
-    int temp;
-    for (int i = 0; i < (n - 1); i++){
-        for (int j = 0; j < (n - 1 - 1); j++){
-            if (*record(j)->marks < *record(j+1)->marks){
-                temp = *record(j).marks;
-                *record(j)->marks = *record(j+1)->marks;
+void sort(int n,memb *record) {
+    for (int i = 0; i < n - 1; i++){
+        for (int j = 0; j < n - i - 1; j++){
+
+            if ((record + j)->marks < (record + j + 1)->marks){
                 
+                memb temp = record[j];
+                record[j] = record[j+1];
+                record[j+1] = temp;
+        
             }
+            printf("\n");
         }
     }
-printf("\nSorted data in descending order is : \n\n");
-for(int i=0;i<n;i++){
-    printf("%d ...............\n", i);
-    printf("Name of %d is %s\n",i,*record(i).name);
-    printf("Roll  = %d\n", *record(i).roll);
-    printf("Marks = %.2f\n", *record(i).marks);
-}
+    printf("\nSorted data in descending order is : \n\n");
+    for(int i=0;i<n;i++){
+        printf("%d ...............\n", i+1);
+        printf("Name of %d student : %s\n",i+1,(record + i)->name);
+        printf("Roll  : %d\n", (record + i)->roll);
+        printf("Marks : %.2f\n", (record + i)->marks);
+    }
 }
