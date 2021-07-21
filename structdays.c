@@ -18,33 +18,25 @@ struct Date {
         dates.day += 1;
 
         if (dates.month > 12){
-            printf("\n---------Year Change------------\n");
+            printf("\n-----------------Year Change----------------\n");
             dates.month = 1;
             dates.year += 1;
             if (dates.day > 30){
-            printf("\n---------Month Change------------\n");
+            printf("\n-----------------Month Change--------------\n");
             dates.month += 1;
             dates.day = 1;
             }
-        printf("Day is : %d    ", dates.day);
-        printf("Month is : %d    ",dates.month);
-        printf("Year is : %d\n",dates.year);
-        continue;
         }
 
         if (dates.day > 30){
             dates.day = 1;
             dates.month +=1;
-            printf("\n---------Month Change------------\n");
+            printf("\n-----------------Month Change--------------\n");
                 if (dates.month > 12){
-            printf("\n---------Year Change------------\n");
+            printf("\n-----------------Year Change---------------\n");
                 dates.month = 1;
                 dates.year +=1 ;
                 }
-        printf("Day is : %d    ", dates.day);
-        printf("Month is : %d    ",dates.month);
-        printf("Year is : %d\n",dates.year);
-        continue;
         }
 
         printf("Day is : %d    ", dates.day);
