@@ -1,8 +1,10 @@
 #include <stdio.h>
+
 typedef struct{
 int roll;
 float marks;
 }okay;
+
 void main() {
 int x;
 okay student1 = {222,88.12};
