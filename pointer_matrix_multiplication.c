@@ -14,7 +14,7 @@ void main()
     int mat2[ROW][COL];
     int product[ROW][COL];
 
-    //imput
+    //input
     printf("Enter elements in first matrix of size %dx%d\n", ROW, COL);
     input(mat1);
 

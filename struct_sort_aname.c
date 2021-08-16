@@ -35,7 +35,7 @@ for(i=0; i<(n-1); i++){
 
 printf("\nSorted data in ascending is : \n\n");
 for(i=0;i<n;i++){
-    printf("%d ...............\n", i);
+    printf("%d ...............\n", i+1);
     printf("Name of %d is %s\n",i+1,student[i].name);
     printf("Roll  = %d\n", student[i].roll);
     printf("Marks = %.2f\n", student[i].marks);

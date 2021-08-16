@@ -59,5 +59,5 @@ void display(struct date asked){
             printf("December");
             break;
     }
-    printf(" %d, %d",asked.days,asked.year);
+    printf(" %d, %d",asked.days%32,asked.year);
 }
