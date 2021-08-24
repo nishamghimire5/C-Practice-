@@ -26,4 +26,5 @@ printf("\nSorted array is : ");
 for(i=0;i<n;i++){
 printf("%d ",*(ptr+i));
 }
+free(ptr);
 }
